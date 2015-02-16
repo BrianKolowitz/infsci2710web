@@ -1,0 +1,5 @@
+<p>Departments</p>
+<ul>
+    <li ng-repeat="department in departments">{{$index + 1 + offset}}) {{department.dept_name}} {{department.avg_salary | currency}}</li>
+</ul>
+<div ng-bind="error" ng-show="error != null"></div>

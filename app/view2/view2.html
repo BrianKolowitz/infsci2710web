@@ -1,0 +1,10 @@
+<p>Instructors</p>
+Limit: <input type="number" ng-model="limit" ng-change="search()">
+Offset: <input type="number" ng-model="offset" ng-change="search()">
+<input type="button" value="Add" ng-click="add()">
+
+<ul>
+    <li ng-repeat="instructor in instructors">{{$index + 1 + offset}}) {{instructor.ID}} : {{instructor.name}} - {{instructor.dept_name}} {{instructor.salary | currency}}
+    <input type="button" value="Delete" ng-click="delete(instructor.ID)"></li>
+</ul>
+<div ng-bind="error" ng-show="error != null"></div>
